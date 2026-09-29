@@ -21,10 +21,13 @@ Markup contract:
 
 Link to `?view=tldr` to open a page in the TLDR view.
 
+The TLDR block reuses each page's own typography classes (for example `heading-style-h5` on Engage, `heading-style-h5-5` on Keywords), so check a page's existing classes before adding its TLDR. List spacing lives on the `tldr-list` combo class for each paragraph style.
+
 ## Status
 
 | Case study | Webflow page | TLDR |
 | --- | --- | --- |
 | Validity Engage | `/work/engage` | Added, not yet published |
+| Keyword Research | `/work/keywords` | Added, not yet published |
 
 Every TLDR covers: the problem, my responsibilities, key considerations and trade-offs, improvements, and the outcome.
