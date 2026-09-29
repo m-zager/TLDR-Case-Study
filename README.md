@@ -1,6 +1,8 @@
 # TLDR-Case-Study
 Create a TLDR version of your product case study and create a toggle on your webpage to filter between the two versions.
 
+**New here? See [USAGE.md](USAGE.md) for how to add a TLDR to a page with Claude.**
+
 ## How it works (Webflow)
 
 Each case study page gets:
