@@ -7,7 +7,7 @@ Create a TLDR version of your product case study and create a toggle on your web
 
 Each case study page gets:
 
-1. A **toggle** (`src/tldr-toggle.html`) at the end of the Project Info Items Block.
+1. A **toggle** (`src/tldr-toggle.html`) near the top of the case study (on zagerux.com, at the end of the Project Info Items Block).
 2. A **TLDR summary block** (`case-studies/<page>-tldr.html`) placed after the hero image.
 3. **Page custom code**: the state and visibility rules from `src/tldr-toggle.css` go in the page `<head>`, and `src/tldr-toggle.js` goes before `</body>`.
 
