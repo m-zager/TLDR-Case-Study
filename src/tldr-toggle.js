@@ -64,3 +64,40 @@
     });
   });
 })();
+
+/*
+ * Lightbox fallback. Webflow's API can't set a lightbox's media, so a lightbox
+ * added through it opens nothing. For any lightbox with no media, use the image
+ * inside it, then re-run Webflow's lightbox setup so the click opens it.
+ * Lightboxes that already have media in the Designer are left alone.
+ */
+(function () {
+  window.Webflow = window.Webflow || [];
+  window.Webflow.push(function () {
+    var fixed = 0;
+    Array.prototype.forEach.call(document.querySelectorAll('.w-lightbox'), function (box) {
+      var img = box.querySelector('img');
+      if (!img) return;
+      var json = null;
+      for (var i = 0; i < box.children.length; i++) {
+        if (box.children[i].classList.contains('w-json')) { json = box.children[i]; break; }
+      }
+      var data = { items: [], group: '' };
+      try { if (json) data = JSON.parse(json.textContent) || data; } catch (e) {}
+      if (data.items && data.items.length) return;
+      data.items = [{ type: 'image', url: img.getAttribute('src') }];
+      if (!json) {
+        json = document.createElement('script');
+        json.type = 'application/json';
+        json.className = 'w-json';
+        box.appendChild(json);
+      }
+      json.textContent = JSON.stringify(data);
+      fixed++;
+    });
+    if (fixed && window.Webflow.require) {
+      var lightbox = window.Webflow.require('lightbox');
+      if (lightbox && lightbox.ready) lightbox.ready();
+    }
+  });
+})();
