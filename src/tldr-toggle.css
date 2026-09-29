@@ -1,0 +1,35 @@
+/* Base toggle styles. On Webflow these live as the classes .tldr-toggle,
+   .tldr-toggle-btn and .tldr-list; this file is the source of truth. */
+.tldr-toggle {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 4px;
+  gap: 4px;
+  border-radius: 12px;
+  background-color: #f1f1f1;
+  margin-bottom: 32px;
+}
+.tldr-toggle-btn {
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #5a6271;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.tldr-list {
+  margin: 0;
+  padding-left: 20px;
+}
+.tldr-list li + li { margin-top: 8px; }
+
+/* Page custom code (head): state + visibility rules. */
+.tldr-toggle-btn[aria-pressed="true"] { background-color: #1e1e1e; color: #fff; }
+.tldr-toggle-btn:focus-visible { outline: 2px solid #1e1e1e; outline-offset: 2px; }
+[data-tldr-scope][data-tldr-view="tldr"] > :not([data-tldr]) { display: none !important; }
+[data-tldr-scope]:not([data-tldr-view="tldr"]) > [data-tldr="summary"] { display: none !important; }
