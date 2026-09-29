@@ -31,5 +31,6 @@ Lightboxes added through Webflow's API have no media, because the API can't set 
 | --- | --- | --- |
 | Validity Engage | `/work/engage` | Added, not yet published |
 | Keyword Research | `/work/keywords` | Added, not yet published |
+| Tailwind Ghostwriter | `/work/ghostwriter` | Added, not yet published |
 
 Every TLDR covers: the problem, my responsibilities, key considerations and trade-offs, improvements, and the outcome.
