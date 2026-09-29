@@ -1,6 +1,8 @@
 # TLDR-Case-Study
 Create a TLDR version of your product case study and create a toggle on your webpage to filter between the two versions.
 
+**New here? See [USAGE.md](USAGE.md) for how to add a TLDR to a page with Claude.**
+
 ## How it works (Webflow)
 
 Each case study page gets:
@@ -31,5 +33,6 @@ Lightboxes added through Webflow's API have no media, because the API can't set 
 | --- | --- | --- |
 | Validity Engage | `/work/engage` | Added, not yet published |
 | Keyword Research | `/work/keywords` | Added, not yet published |
+| Tailwind Ghostwriter | `/work/ghostwriter` | Added, not yet published |
 
 Every TLDR covers: the problem, my responsibilities, key considerations and trade-offs, improvements, and the outcome.
