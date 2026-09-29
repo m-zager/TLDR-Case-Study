@@ -2,8 +2,6 @@
 
 This repo holds everything needed to add a **TLDR version** and a **"Full case study / TLDR" toggle** to a portfolio case study page in Webflow. Claude does the work through its Webflow connector. You review and publish.
 
-It has been used on three pages so far: Validity Engage, Keyword Research, and Tailwind Ghostwriter.
-
 ## What you get on each page
 
 - **A toggle** at the end of the project info list (Year / Scope / Timeline / Industry). "Full case study" is the default view.
